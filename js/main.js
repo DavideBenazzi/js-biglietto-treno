@@ -24,19 +24,19 @@ if ( isNaN(km) || isNaN(eta) ) {
 var prezzoKm = 0.21;
 
 //Prezzo scontato del 20% per minorenni
-var prezzoKmMinori = Math.trunc(0.21 * 0.8 * 100) / 100 ;
+var prezzoKmMinori = 0.21 * 0.8;
 
 //Prezzo scontato del 40% per over 65 enni
-var prezzoKmOver = Math.trunc(0.21 * 0.6 * 100) / 100 ;
+var prezzoKmOver = 0.21 * 0.6;
 
 //Calcolo per biglietto
-var biglietto = km * prezzoKm;
+var biglietto = (km * prezzoKm).toFixed(2);
 
 //Calcolo per biglietto minorenni
-var bigliettoMinori = km * prezzoKmMinori ;
+var bigliettoMinori = (km * prezzoKmMinori).toFixed(2);
 
 //Calcolo per biglietto over 65
-var bigliettoOver = km * prezzoKmOver ;
+var bigliettoOver = (km * prezzoKmOver).toFixed(2);
 
 //Condizione per Calcolare l'eta' per lo sconto
 if (eta > 65) {
